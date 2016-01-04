@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "a simple todo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarSar440/T100.git"
+  },
+  "author": "sarsar440",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SarSar440/T100/issues"
+  },
+  "homepage": "https://github.com/SarSar440/T100#readme"
+}
