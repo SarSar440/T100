@@ -1,6 +1,6 @@
 angular.module('TodoApp', [])
-.controller 'TodoAppController, [ $scope, ($scope) ->
-   $scope.tasksToDo = []
+.controller 'TodoAppController', [ $scope, ($scope) ->
+  $scope.tasksToDo = []
   $scope.error = false
   $scope.addTask = (task) ->
      if not task

@@ -17,3 +17,30 @@ input[type='text'] {
    box-shadow: none;
    border: none;
 }
+
+button {
+   padding: 15px;
+   margin-left: -4px;
+   font-size: 14px;
+   border-radius: 0 4px 4px 0;
+   box-shadow: none;
+   border: none;
+   background-color: $black;
+   color: $white;
+}
+
+.error-message {
+   margin: 10px;
+   color: $danger-red;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+
+   li {
+      margin: 5px;
+      padding: 5px 20px;
+      border: 1px solid $danger-red;
+   }
+}
