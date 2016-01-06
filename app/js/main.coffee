@@ -1,5 +1,5 @@
-angular.module('TodoApp', [])
-.controller 'TodoAppController', [ $scope, ($scope) ->
+app =angular.module('TodoApp', [])
+app.controller 'TodoAppController', [ $scope, ($scope) ->
   $scope.tasksToDo = []
   $scope.error = false
   $scope.addTask = (task) ->
