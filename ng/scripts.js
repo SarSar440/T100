@@ -1,0 +1,1 @@
+var app;app=angular.module("TodoApp",[]),app.controller("TodoAppController",[$scope,function(o){return o.tasksToDo=[],o.error=!1,o.addTask=function(r){return r?(o.tasksToDo.push(r),o.newTask="",o.error=!1):o.error=!0}}]);
