@@ -17,8 +17,8 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('app/js'))
 });
 
-gulp.task('automate', function() {
-  gulp.watch(['*.scss', '*.js'], ['scripts', 'styles']);
+gulp.task('watch', function() {
+  gulp.watch(['ng/**/*.scss', 'ng/**/*.js'], ['scripts', 'styles']);
 });
 
 gulp.task('default', ['scripts', 'styles']);
