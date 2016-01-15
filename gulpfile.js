@@ -4,21 +4,21 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 
 gulp.task('styles', function () {
-  gulp.src('app/**/*.scss')
+  gulp.src('ng/scss/*.scss')
   .pipe(sass())
-  .pipe(gulp.dest('ng/'));
+  .pipe(gulp.dest('app/css'));
 });
 
 gulp.task('scripts', function() {
-  gulp.src('app/**/*.js')
-    .pipe(concat('scripts.js'))
+  gulp.src('ng/js/*.js')
+    .pipe(concat('shell.js'))
     .pipe(gulp.dest('.'))
     .pipe(uglify())
-    .pipe(gulp.dest('ng/'))
+    .pipe(gulp.dest('app/js'))
 });
 
 gulp.task('automate', function() {
-  gulp.watch(['*.scss', 'js/*.js'], ['scripts', 'styles']);
+  gulp.watch(['*.scss', '*.js'], ['scripts', 'styles']);
 });
 
 gulp.task('default', ['scripts', 'styles']);
