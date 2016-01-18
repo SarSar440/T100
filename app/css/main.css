@@ -2,6 +2,9 @@ body {
   background-color: #fff;
   color: #444;
   text-align: center; }
+  body .done {
+    text-decoration: line-through;
+    color: #ccc; }
 
 input[type='text'] {
   background-color: #eee;

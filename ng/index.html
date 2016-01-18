@@ -6,14 +6,15 @@
   </head>
   <body>
     <div ng-controller="TodoAppController">
-      <form name="taskFrm">
-        <input type="text" placeholder="Add things to do" class="input-form">
-        <button type="submit" class="btn">Submit</button>
+      <form name="taskFrm" ng-submit="addTodo()">
+        <input type="text" placeholder="Add things to do" class="input-form" ng-model="newTodo" required />
+        <button class="btn" type="submit" ng-disabled="taskFrm.$invalid">Submit</button>
       </form>
+      <button type="button" ng-click="clearTodo()">Clear</button>
       <ul>
         <li ng-repeat="task in tasks track by $index">
-          <span>{{task.title}}</span>
-          <span>{{task.done}}</span>
+          <span ng-class="{'done':todo.done}">{{task.title}}</span>
+          <input type="checkbox" ng-model="todo.done">
         </li>
       </ul>
     </div>
