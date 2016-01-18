@@ -14,7 +14,7 @@ gulp.task('scripts', function() {
     .pipe(concat('shell.js'))
     .pipe(gulp.dest('.'))
     .pipe(uglify())
-    .pipe(gulp.dest('app/js'))
+    .pipe(gulp.dest('app/js/'))
 });
 
 gulp.task('watch', function() {

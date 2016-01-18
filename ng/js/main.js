@@ -1,19 +1,10 @@
-var app;
+var app = angular.module('TodoApp', []);
 
-app = angular.module('TodoApp', []);
-
-app.controller('TodoAppController', [
-  $scope, function($scope) {
-    $scope.tasksToDo = [];
+app.controller('TodoAppController', [ '$scope', function($scope) {
+    $scope.tasks = [ { 'title': 'build an app', 'done': false }];
     $scope.error = false;
-    return $scope.addTask = function(task) {
-      if (!task) {
-        return $scope.error = true;
-      } else {
-        $scope.tasksToDo.push(task);
-        $scope.newTask = '';
-        return $scope.error = false;
-      }
-    };
+
+    $scope.addTask = function(){};
+    $scope.clearTask = function(){};
   }
 ]);

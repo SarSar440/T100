@@ -1,1 +1,1 @@
-var app;app=angular.module("TodoApp",[]),app.controller("TodoAppController",[$scope,function(o){return o.tasksToDo=[],o.error=!1,o.addTask=function(r){return r?(o.tasksToDo.push(r),o.newTask="",o.error=!1):o.error=!0}}]);
+var app=angular.module("TodoApp",[]);app.controller("TodoAppController",["$scope",function(r){return r.tasks=[{title:"build an app",done:!1}],r.error=!1,r.addTask=function(o){return o?(r.tasksToDo.push(o),r.newTask="",r.error=!1):r.error=!0}}]);

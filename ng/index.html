@@ -2,15 +2,23 @@
 <html ng-app="TodoApp">
   <head>
     <title>'ToDo App'</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../app/css/main.css">
   </head>
-  <body ng-controller="TodoAppController">
-    <input type="text" placeholder="Add things to do" class="input-form">
-    <button type="submit" class="btn">Submit</button>
-    <ul>
-      <li ng-repeat="task in tasksToDo track by $index">{{task}}</li>
-    </ul>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <body>
+    <div ng-controller="TodoAppController">
+      <form name="taskFrm">
+        <input type="text" placeholder="Add things to do" class="input-form">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <ul>
+        <li ng-repeat="task in tasks track by $index">
+          <span>{{task.title}}</span>
+          <span>{{task.done}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <script src="../node_modules/angular/angular.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
